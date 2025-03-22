@@ -332,6 +332,81 @@
             height: 100%;
             border: none;
         }
+
+        /* 添加联系方式样式 */
+        .contact-section {
+            background: var(--card-bg);
+            padding: 4rem 2rem;
+            margin: 4rem auto;
+            text-align: center;
+            border-radius: 24px;
+            max-width: 1200px;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            color: var(--orange);
+            margin-bottom: 3rem;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            border-radius: 50%;
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 2rem;
+            color: var(--orange);
+        }
+
+        .contact-icon:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            border-radius: 16px;
+            border: 2px solid var(--orange);
+            padding: 10px;
+            background: white;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                gap: 2rem;
+            }
+
+            .qr-code {
+                width: 150px;
+                height: 150px;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1039,6 +1114,33 @@
             </div>
         </section>
     </div>
+
+    <footer class="contact-section">
+        <h2 class="contact-title">欢迎联系我们</h2>
+        <div class="contact-container">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-weixin"></i>
+                </div>
+                <img src="./image/wechat.jpg" alt="WeChat QR Code" class="qr-code">
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-line"></i>
+                </div>
+                <img src="./image/line.jpg" alt="LINE QR Code" class="qr-code">
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <img src="./image/ins.jpg" alt="Instagram QR Code" class="qr-code">
+            </div>
+        </div>
+    </footer>
+
+    <!-- 添加 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script>
         let currentSlide = 0;
