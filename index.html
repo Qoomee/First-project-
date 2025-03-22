@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thailand Essential Guide | 泰国超实用网站导航</title>
+    <style>
+        :root {
+            --background: #000000;
+            --card-bg: #2D1810;
+            --orange: #FF6B35;
+            --text-light: #FFFFFF;
+            --text-gray: rgba(255, 255, 255, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text-light);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 50% 50%, #111111 0%, var(--background) 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .main-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header-image {
+            width: 400px;
+            height: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .header-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .site-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .site-description {
+            font-size: 1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+
+        .official-link {
+            color: var(--orange);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 107, 53, 0.1) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .category-icon {
+            width: 32px;
+            height: 32px;
+            fill: var(--orange);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .item-title {
+            font-size: 1.5rem;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .item-icon {
+            width: 24px;
+            height: 24px;
+            fill: var(--orange);
+        }
+
+        .item-description {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .features-list li {
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: '•';
+            color: var(--orange);
+            position: absolute;
+            left: 0;
+        }
+
+        .link {
+            color: var(--orange);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--orange);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .link:hover {
+            background: var(--orange);
+            color: var(--text-light);
+        }
+
+        .pyramid-section {
+            position: relative;
+            padding: 2rem;
+            margin: 4rem 0;
+        }
+
+        .pyramid-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 2px solid var(--orange);
+        }
+
+        .pyramid-number {
+            font-size: 2rem;
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .pyramid-content {
+            flex: 1;
+        }
+
+        .timeline-section {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--orange);
+            border-radius: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 1rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: var(--orange);
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+            }
+
+            .header-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .site-title {
+                font-size: 2rem;
+            }
+
+            .category {
+                padding: 1.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 添加滑动容器样式 */
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            padding: 0.5rem 0;
+        }
+
+        .slider-content {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.3s ease;
+            padding: 0 2rem;
+        }
+
+        .slider-item {
+            flex: 0 0 calc(33.333% - 1.33rem);
+            min-width: 300px;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 2px solid var(--orange);
+            color: var(--orange);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .slider-button:hover {
+            background: var(--orange);
+            color: var(--text-light);
+        }
+
+        .slider-button.prev {
+            left: 0;
+        }
+
+        .slider-button.next {
+            right: 0;
+        }
+
+        .slider-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* 添加地图容器样式 */
+        .map-container {
+            width: 100%;
+            height: 200px;
+            margin-top: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--orange);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-header">
+            <div class="header-content">
+                <h1 class="site-title">Thailand Essential Guide<br>泰国超实用网站导航</h1>
+                <p class="site-description">为前往泰国的游客和居住者提供最实用的信息和资源，便捷全面，轻松找到所需信息。</p>
+                <a href="https://www.tourismthailand.org/" class="official-link" target="_blank">
+                    泰国旅游局官方网站 →
+                </a>
+            </div>
+            <div class="header-image">
+                <img src="https://images.unsplash.com/photo-1583491470869-ca0989675019" alt="曼谷天际线">
+            </div>
+        </div>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🚇</span>
+                公共交通
+            </h2>
+            <div class="content-grid">
+                <div class="item">
+                    <h3 class="item-title">
+                        <span class="item-icon">🚊</span>
+                        BTS (空中轻轨)
+                    </h3>
+                    <p class="item-description">曼谷天空列车系统，覆盖市中心主要商圈</p>
+                    <ul class="features-list">
+                        <li>实时列车时刻表</li>
+                        <li>路线图及票价查询</li>
+                        <li>Rabbit Card办理信息</li>
+                    </ul>
+                    <a href="https://www.bts.co.th/" class="link" target="_blank">访问官网 →</a>
+                </div>
+
+                <div class="item">
+                    <h3 class="item-title">
+                        <span class="item-icon">🚇</span>
+                        MRT (地铁)
+                    </h3>
+                    <p class="item-description">曼谷地铁系统，与BTS形成完整交通网络</p>
+                    <ul class="features-list">
+                        <li>蓝线和紫线路线图</li>
+                        <li>车站设施信息</li>
+                        <li>MRT Card办理指南</li>
+                    </ul>
+                    <a href="https://www.mrta.co.th/" class="link" target="_blank">访问官网 →</a>
+                </div>
+
+                <div class="item">
+                    <h3 class="item-title">
+                        <span class="item-icon">✈️</span>
+                        Airport Link
+                    </h3>
+                    <p class="item-description">连接素万那普机场与市区的快速列车</p>
+                    <ul class="features-list">
+                        <li>运行时刻表</li>
+                        <li>票价信息</li>
+                        <li>与BTS/MRT换乘指南</li>
+                    </ul>
+                    <a href="https://www.srtet.co.th/index.php/en/" class="link" target="_blank">访问官网 →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🚗</span>
+                打车软件
+            </h2>
+            <div class="slider-container">
+                <button class="slider-button prev" onclick="slideContent(-1)">←</button>
+                <button class="slider-button next" onclick="slideContent(1)">→</button>
+                <div class="slider-content">
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">📱</span>
+                                Grab
+                            </h3>
+                            <p class="item-description">东南亚地区最大的打车应用之一</p>
+                            <ul class="features-list">
+                                <li>支持信用卡和现金支付</li>
+                                <li>提供私家车、出租车和摩托车服务</li>
+                                <li>可以预约用车</li>
+                            </ul>
+                            <a href="https://www.grab.com/th/" class="link" target="_blank">下载应用 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🚖</span>
+                                Bolt
+                            </h3>
+                            <p class="item-description">来自爱沙尼亚的打车应用，价格实惠</p>
+                            <ul class="features-list">
+                                <li>价格透明，一般低于Grab</li>
+                                <li>可选女性司机</li>
+                                <li>支持多种支付方式</li>
+                            </ul>
+                            <a href="https://bolt.eu/th/" class="link" target="_blank">下载应用 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🚕</span>
+                                CABB
+                            </h3>
+                            <p class="item-description">高品质出租车服务</p>
+                            <ul class="features-list">
+                                <li>统一蓝色车型</li>
+                                <li>司机经过专业培训</li>
+                                <li>服务标准统一</li>
+                            </ul>
+                            <a href="https://www.facebook.com/CABBThailand/" class="link" target="_blank">预订用车 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🚗</span>
+                                inDrive
+                            </h3>
+                            <p class="item-description">可议价的打车应用</p>
+                            <ul class="features-list">
+                                <li>乘客可以自主出价</li>
+                                <li>司机可以选择接受或拒绝</li>
+                                <li>支持现金支付</li>
+                            </ul>
+                            <a href="https://indrive.com/th/" class="link" target="_blank">下载应用 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🦸</span>
+                                Robinhood Ride
+                            </h3>
+                            <p class="item-description">本土打车应用，收取较低佣金</p>
+                            <ul class="features-list">
+                                <li>价格实惠</li>
+                                <li>支持多种支付方式</li>
+                                <li>本地化服务</li>
+                            </ul>
+                            <a href="https://www.robinhood.co.th/" class="link" target="_blank">下载应用 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">✈️</span>
+                                airasia ride
+                            </h3>
+                            <p class="item-description">亚航旗下打车服务</p>
+                            <ul class="features-list">
+                                <li>可累积亚航积分</li>
+                                <li>机场接送特色服务</li>
+                                <li>固定价格选项</li>
+                            </ul>
+                            <a href="https://air.asia/ride" class="link" target="_blank">下载应用 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🛵</span>
+                                MuvMi
+                            </h3>
+                            <p class="item-description">电动三轮车共享服务</p>
+                            <ul class="features-list">
+                                <li>环保电动车</li>
+                                <li>适合短途出行</li>
+                                <li>固定路线服务</li>
+                            </ul>
+                            <a href="https://www.muvmi.co/" class="link" target="_blank">下载应用 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">💬</span>
+                                LINE TAXI
+                            </h3>
+                            <p class="item-description">LINE应用内置打车服务</p>
+                            <ul class="features-list">
+                                <li>无需另外下载应用</li>
+                                <li>可使用LINE支付</li>
+                                <li>与LINE积分联动</li>
+                            </ul>
+                            <a href="https://taxi.line.me/" class="link" target="_blank">了解更多 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🚖</span>
+                                Maxim
+                            </h3>
+                            <p class="item-description">国际连锁打车服务</p>
+                            <ul class="features-list">
+                                <li>多种车型可选</li>
+                                <li>价格实惠</li>
+                                <li>支持预约服务</li>
+                            </ul>
+                            <a href="https://taximaxim.com/th/" class="link" target="_blank">下载应用 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🏦</span>
+                主要银行
+            </h2>
+            <div class="slider-container">
+                <button class="slider-button prev" onclick="slideBanks(-1)">←</button>
+                <button class="slider-button next" onclick="slideBanks(1)">→</button>
+                <div class="slider-content banks-slider">
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">💳</span>
+                                Kasikorn Bank (KBank)
+                            </h3>
+                            <p class="item-description">泰国最大的商业银行之一</p>
+                            <ul class="features-list">
+                                <li>K PLUS手机银行APP</li>
+                                <li>外国人开户服务</li>
+                                <li>支持中文服务</li>
+                            </ul>
+                            <a href="https://www.kasikornbank.com/en" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏛️</span>
+                                Bangkok Bank
+                            </h3>
+                            <p class="item-description">泰国历史最悠久的商业银行</p>
+                            <ul class="features-list">
+                                <li>提供国际汇款服务</li>
+                                <li>手机银行APP</li>
+                                <li>支持多语言服务</li>
+                            </ul>
+                            <a href="https://www.bangkokbank.com/en" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">📱</span>
+                                SCB (暹罗商业银行)
+                            </h3>
+                            <p class="item-description">泰国领先的数字银行</p>
+                            <ul class="features-list">
+                                <li>SCB EASY APP</li>
+                                <li>提供留学生专属服务</li>
+                                <li>支持微信支付</li>
+                            </ul>
+                            <a href="https://www.scb.co.th/en/personal-banking.html" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🌟</span>
+                                Krungsri (大城银行)
+                            </h3>
+                            <p class="item-description">三菱日联集团成员银行</p>
+                            <ul class="features-list">
+                                <li>提供日元账户服务</li>
+                                <li>支持多币种信用卡</li>
+                                <li>专业投资理财服务</li>
+                            </ul>
+                            <a href="https://www.krungsri.com/en/personal" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏦</span>
+                                Krungthai Bank
+                            </h3>
+                            <p class="item-description">泰国国有商业银行</p>
+                            <ul class="features-list">
+                                <li>政府补贴项目合作银行</li>
+                                <li>覆盖网点最广</li>
+                                <li>提供完整政务服务</li>
+                            </ul>
+                            <a href="https://krungthai.com/en/personal" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">💰</span>
+                                TMBThanachart Bank (ttb)
+                            </h3>
+                            <p class="item-description">合并后的综合性商业银行</p>
+                            <ul class="features-list">
+                                <li>数字银行服务完善</li>
+                                <li>提供特色储蓄产品</li>
+                                <li>企业金融服务专业</li>
+                            </ul>
+                            <a href="https://www.ttbbank.com/en" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🌏</span>
+                                UOB Thai
+                            </h3>
+                            <p class="item-description">新加坡大华银行泰国分行</p>
+                            <ul class="features-list">
+                                <li>跨国银行服务</li>
+                                <li>东盟区域业务便利</li>
+                                <li>私人银行服务专业</li>
+                            </ul>
+                            <a href="https://www.uob.co.th/en/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🏥</span>
+                知名医院
+            </h2>
+            <div class="slider-container">
+                <button class="slider-button prev" onclick="slideHospitals(-1)">←</button>
+                <button class="slider-button next" onclick="slideHospitals(1)">→</button>
+                <div class="slider-content hospitals-slider">
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏨</span>
+                                三美泰医院 (Samitivej)
+                            </h3>
+                            <p class="item-description">国际JCI认证医院，设备先进</p>
+                            <ul class="features-list">
+                                <li>提供中文服务</li>
+                                <li>专业医疗翻译</li>
+                                <li>可预约国际部就医</li>
+                            </ul>
+                            <a href="https://www.samitivejhospitals.com/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏥</span>
+                                曼谷医院 (Bangkok Hospital)
+                            </h3>
+                            <p class="item-description">泰国最大的私立医疗机构之一</p>
+                            <ul class="features-list">
+                                <li>24小时急诊服务</li>
+                                <li>国际医疗部</li>
+                                <li>专业体检套餐</li>
+                            </ul>
+                            <a href="https://www.bangkokhospital.com/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏥</span>
+                                康民医院 (Bumrungrad)
+                            </h3>
+                            <p class="item-description">亚洲最大的私立医院之一</p>
+                            <ul class="features-list">
+                                <li>国际化医疗团队</li>
+                                <li>一站式医疗服务</li>
+                                <li>提供医疗签证协助</li>
+                            </ul>
+                            <a href="https://www.bumrungrad.com/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏥</span>
+                                帕亚泰医院 (Phyathai)
+                            </h3>
+                            <p class="item-description">综合性私立医疗机构</p>
+                            <ul class="features-list">
+                                <li>多家分院覆盖曼谷</li>
+                                <li>产科服务出名</li>
+                                <li>提供健康体检服务</li>
+                            </ul>
+                            <a href="https://www.phyathai.com/en/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏥</span>
+                                拉玛九世医院 (Rama 9)
+                            </h3>
+                            <p class="item-description">泰国知名公立医院</p>
+                            <ul class="features-list">
+                                <li>价格相对实惠</li>
+                                <li>医疗设备先进</li>
+                                <li>专科治疗齐全</li>
+                            </ul>
+                            <a href="https://www.rama9hospital.org/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏥</span>
+                                威他雅医院 (Vejthani)
+                            </h3>
+                            <p class="item-description">专注骨科和整形美容</p>
+                            <ul class="features-list">
+                                <li>骨科手术中心</li>
+                                <li>美容整形专科</li>
+                                <li>国际患者服务完善</li>
+                            </ul>
+                            <a href="https://www.vejthani.com/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🌙</span>
+                特色夜市
+            </h2>
+            <div class="slider-container">
+                <button class="slider-button prev" onclick="slideMarkets(-1)">←</button>
+                <button class="slider-button next" onclick="slideMarkets(1)">→</button>
+                <div class="slider-content markets-slider">
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🚂</span>
+                                火车夜市 (Train Night Market)
+                            </h3>
+                            <p class="item-description">曼谷最受欢迎的夜市之一</p>
+                            <ul class="features-list">
+                                <li>复古工业风格</li>
+                                <li>特色街头美食</li>
+                                <li>文创市集摊位</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b3b!2sTrain%20Night%20Market!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.facebook.com/taradrotfai/" class="link" target="_blank">访问主页 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🎡</span>
+                                Asiatique河畔夜市
+                            </h3>
+                            <p class="item-description">现代化河畔夜市综合体</p>
+                            <ul class="features-list">
+                                <li>临湄南河景观</li>
+                                <li>购物、美食、娱乐</li>
+                                <li>摩天轮地标</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sAsiatique!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.asiatiquethailand.com/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🌆</span>
+                                Talad Neon夜市
+                            </h3>
+                            <p class="item-description">霓虹主题夜市</p>
+                            <ul class="features-list">
+                                <li>网红打卡地</li>
+                                <li>特色小吃集中地</li>
+                                <li>年轻时尚氛围</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sTalad%20Neon!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.facebook.com/taladneon/" class="link" target="_blank">访问主页 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏮</span>
+                                中国城夜市 (Yaowarat)
+                            </h3>
+                            <p class="item-description">曼谷唐人街美食天堂</p>
+                            <ul class="features-list">
+                                <li>地道中泰美食</li>
+                                <li>传统街区氛围</li>
+                                <li>海鲜餐厅集中</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sYaowarat!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.tourismthailand.org/Attraction/yaowarat-road" class="link" target="_blank">了解更多 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🎪</span>
+                                JJ Green夜市
+                            </h3>
+                            <p class="item-description">复古怀旧风格夜市</p>
+                            <ul class="features-list">
+                                <li>二手古董市集</li>
+                                <li>文艺小店云集</li>
+                                <li>特色酒吧街区</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sJJ%20Green!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.facebook.com/jjgreenvintagemarket/" class="link" target="_blank">访问主页 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏪</span>
+                                暹罗天地夜市 (Siam Square Night)
+                            </h3>
+                            <p class="item-description">市中心时尚夜市</p>
+                            <ul class="features-list">
+                                <li>年轻潮流商品</li>
+                                <li>街头小吃集中</li>
+                                <li>交通便利</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sSiam%20Square!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.facebook.com/siamsquarenight/" class="link" target="_blank">访问主页 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🎨</span>
+                博物馆与美术馆
+            </h2>
+            <div class="slider-container">
+                <button class="slider-button prev" onclick="slideMuseums(-1)">←</button>
+                <button class="slider-button next" onclick="slideMuseums(1)">→</button>
+                <div class="slider-content museums-slider">
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏛️</span>
+                                曼谷国家博物馆
+                            </h3>
+                            <p class="item-description">泰国最大的博物馆，展示泰国历史文化</p>
+                            <ul class="features-list">
+                                <li>免费参观（周三）</li>
+                                <li>提供中文导览</li>
+                                <li>佛教艺术收藏丰富</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sNational%20Museum%20Bangkok!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.museumthailand.com/en/museum/National-Museum-Bangkok" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🎭</span>
+                                暹罗博物馆
+                            </h3>
+                            <p class="item-description">互动式博物馆，展示泰国文化特色</p>
+                            <ul class="features-list">
+                                <li>多媒体互动展示</li>
+                                <li>适合亲子参观</li>
+                                <li>定期举办文化工作坊</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sMuseum%20Siam!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.museumsiam.org/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🎨</span>
+                                曼谷艺术文化中心
+                            </h3>
+                            <p class="item-description">现代艺术展览中心</p>
+                            <ul class="features-list">
+                                <li>当代艺术展览</li>
+                                <li>免费参观</li>
+                                <li>艺术书店和咖啡馆</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sBangkok%20Art%20and%20Culture%20Centre!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.bacc.or.th/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏺</span>
+                                吉姆·汤普森故居博物馆
+                            </h3>
+                            <p class="item-description">泰丝文化展示与历史建筑</p>
+                            <ul class="features-list">
+                                <li>传统泰式建筑</li>
+                                <li>泰丝文化展示</li>
+                                <li>提供导览服务</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sJim%20Thompson%20House!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.jimthompsonhouse.com/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🏛️</span>
+                                曼谷皇家宫殿博物馆
+                            </h3>
+                            <p class="item-description">展示泰国皇室历史与文化</p>
+                            <ul class="features-list">
+                                <li>皇家文物展示</li>
+                                <li>建筑风格独特</li>
+                                <li>提供多语言导览</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sGrand%20Palace!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.royalgrandpalace.th/en/home" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+
+                    <div class="slider-item">
+                        <div class="item">
+                            <h3 class="item-title">
+                                <span class="item-icon">🎨</span>
+                                曼谷当代艺术馆
+                            </h3>
+                            <p class="item-description">展示泰国当代艺术发展</p>
+                            <ul class="features-list">
+                                <li>现代艺术展览</li>
+                                <li>艺术家工作室</li>
+                                <li>艺术教育活动</li>
+                            </ul>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7800000000003!2d100.5483!3d13.7897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c0d1e1f3e9f%3A0x1f3b3b3b3b3b3b!2sMOCA%20Bangkok!5e0!3m2!1sen!2sth!4v1234567890!5m2!1sen!2sth" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <a href="https://www.mocabangkok.com/" class="link" target="_blank">访问官网 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        let currentBankSlide = 0;
+        let currentHospitalSlide = 0;
+        let currentMarketSlide = 0;
+        let currentMuseumSlide = 0;
+
+        const slideContent = (direction) => {
+            const content = document.querySelector('.slider-content');
+            const items = document.querySelectorAll('.slider-content:not(.banks-slider) .slider-item');
+            const maxSlide = items.length - 3;
+            
+            currentSlide = Math.max(0, Math.min(currentSlide + direction, maxSlide));
+            
+            const translateX = currentSlide * -((100 / 3) + 2.5);
+            content.style.transform = `translateX(${translateX}%)`;
+            
+            // 更新按钮状态
+            content.parentElement.querySelector('.prev').disabled = currentSlide === 0;
+            content.parentElement.querySelector('.next').disabled = currentSlide === maxSlide;
+        };
+
+        // 添加银行滑动函数
+        const slideBanks = (direction) => {
+            const content = document.querySelector('.banks-slider');
+            const items = document.querySelectorAll('.banks-slider .slider-item');
+            const maxSlide = items.length - 3;
+            
+            currentBankSlide = Math.max(0, Math.min(currentBankSlide + direction, maxSlide));
+            
+            const translateX = currentBankSlide * -((100 / 3) + 2.5);
+            content.style.transform = `translateX(${translateX}%)`;
+            
+            // 更新按钮状态
+            content.parentElement.querySelector('.prev').disabled = currentBankSlide === 0;
+            content.parentElement.querySelector('.next').disabled = currentBankSlide === maxSlide;
+        };
+
+        const slideHospitals = (direction) => {
+            const content = document.querySelector('.hospitals-slider');
+            const items = document.querySelectorAll('.hospitals-slider .slider-item');
+            const maxSlide = items.length - 3;
+            
+            currentHospitalSlide = Math.max(0, Math.min(currentHospitalSlide + direction, maxSlide));
+            
+            const translateX = currentHospitalSlide * -((100 / 3) + 2.5);
+            content.style.transform = `translateX(${translateX}%)`;
+            
+            content.parentElement.querySelector('.prev').disabled = currentHospitalSlide === 0;
+            content.parentElement.querySelector('.next').disabled = currentHospitalSlide === maxSlide;
+        };
+
+        const slideMarkets = (direction) => {
+            const content = document.querySelector('.markets-slider');
+            const items = document.querySelectorAll('.markets-slider .slider-item');
+            const maxSlide = items.length - 3;
+            
+            currentMarketSlide = Math.max(0, Math.min(currentMarketSlide + direction, maxSlide));
+            
+            const translateX = currentMarketSlide * -((100 / 3) + 2.5);
+            content.style.transform = `translateX(${translateX}%)`;
+            
+            content.parentElement.querySelector('.prev').disabled = currentMarketSlide === 0;
+            content.parentElement.querySelector('.next').disabled = currentMarketSlide === maxSlide;
+        };
+
+        const slideMuseums = (direction) => {
+            const content = document.querySelector('.museums-slider');
+            const items = document.querySelectorAll('.museums-slider .slider-item');
+            const maxSlide = items.length - 3;
+            
+            currentMuseumSlide = Math.max(0, Math.min(currentMuseumSlide + direction, maxSlide));
+            
+            const translateX = currentMuseumSlide * -((100 / 3) + 2.5);
+            content.style.transform = `translateX(${translateX}%)`;
+            
+            content.parentElement.querySelector('.prev').disabled = currentMuseumSlide === 0;
+            content.parentElement.querySelector('.next').disabled = currentMuseumSlide === maxSlide;
+        };
+
+        // 初始化按钮状态
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.slider-container').forEach(container => {
+                container.querySelector('.prev').disabled = true;
+            });
+        });
+    </script>
+</body>
+</html> 
